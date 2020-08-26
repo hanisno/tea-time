@@ -162,11 +162,11 @@ section {
   margin-left: 60px;
   align-items: stretch;
   justify-content: space-between;
-  padding-top: 60px;
+  /*padding-top: 16%;*/
 }
 
 .time-selectors article {
-  padding: 0 60px;
+  padding: 30px 60px 0 60px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -181,6 +181,7 @@ section {
   color: #fff;
   border: none;
   padding: 40px 60px;
+  margin-top: 30px;
 }
 
 /* ==========================================================================
