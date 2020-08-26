@@ -102,14 +102,16 @@ html {
   font-size: 14px;
   margin: 0 auto;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Times New Roman", serif;
   font-size: 1em;
-  background-color: salmon;
+  background-color: rgb(255, 203, 107);
   width: 830px;
-  height: 100vh;
+  height: 90vh;
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -118,24 +120,22 @@ body {
 }
 
 h4 {
-  font-size: 2.1em;
+  font-size: 1.5em;
   margin: 20px 0 0 0;
 }
 
 span {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 header {
+  font-family: "Helvetiva", sans-serif;
   width: 100%;
   text-align: left;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 30px 0;
+  margin-bottom: 30px;
   text-transform: uppercase;
-}
-
-header::after {
-  content: "_";
-  color: #fff;
+  border-bottom: 1px solid #000;
 }
 
 main {
@@ -174,14 +174,14 @@ section {
 }
 
 .time-selectors article {
-  padding: 30px 60px 0 60px;
+  padding: 30px 50px 0 50px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
 
 .time-selectors article p {
-  padding-right: 10px;
+  padding-right: 8px;
 }
 
 #partyTimeButton {
@@ -190,6 +190,11 @@ section {
   border: none;
   padding: 40px 60px;
   margin-top: 30px;
+}
+
+footer {
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
 /* ==========================================================================
