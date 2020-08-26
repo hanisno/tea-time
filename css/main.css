@@ -108,13 +108,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   background-color: salmon;
-  width: 100%;
+  width: 830px;
   height: 100vh;
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -128,27 +127,36 @@ span {
 }
 
 header {
-  text-align: center;
+  width: 100%;
+  text-align: left;
   padding: 20px 0 40px 0;
   text-transform: uppercase;
 }
 
+header::after {
+  content: "_";
+  color: #fff;
+}
+
 main {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 img {
-  max-height: 45vh;
-  width: auto;
+  width: 100%;
 }
 
 section {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
 }
 
 .content-wrapper {
+  width: 90%;
   background: #fff;
   display: flex;
   flex-flow: column wrap;
