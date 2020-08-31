@@ -6,34 +6,33 @@ var wakeupTime = 9;
 var lunchTime = 12;
 var nightTime = 19;
 var partyTime = 15;
+var isPartyTime = false;
+var partyTimeButton = document.getElementById("partyTimeButton");
 
 var updateClock = function () {
   var timeEventJS = document.getElementById("timeEvent");
   var messageText;
   var lolcat = document.getElementById("lolcat");
-  var image = "../img/tea-tray.jpg";
+  var image = "../img/tea-tray.png";
 
   if (time == partyTime) {
     messageText = "Tea party time.";
     image = "../img/thai-tea.jpg";
   } else if (time == wakeupTime) {
     messageText = "Morning tea time.";
-    image = "../img/chamomile-tea-1.jpg";
+    image = "../img/white-tea.jpg";
   } else if (time == lunchTime) {
     messageText = "Lunch tea time.";
-    image = "../img/chamomile-tea-1.jpg";
+    image = "../img/black-tea.jpg";
   } else if (time == nightTime) {
     messageText = "Night tea time.";
-    image = "../img/chamomile-tea-1.jpg";
+    image = "../img/chamomile-tea.jpg";
   } else if (time < noon) {
     messageText = "Good morning.";
-    image = "../img/white-tea.jpg";
   } else if (time > night) {
     messageText = "Good evening.";
-    image = "../img/chamomile-tea.jpg";
   } else {
     messageText = "Good afternoon.";
-    image = "../img/black-tea.jpg";
   }
 
   timeEventJS.innerText = messageText;
@@ -69,3 +68,19 @@ var showCurrentTime = function () {
 updateClock();
 var oneSecond = 1000;
 setInterval(updateClock, oneSecond);
+
+var partyEvent = function () {
+  if (isPartyTime === false) {
+    isPartyTime = true;
+    time = partyTime;
+    partyTimeButton.innerText = "Feeling tea-riffic!";
+    partyTimeButton.style.backgroundColor = "#222";
+  } else {
+    isPartyTime = false;
+    time = new Date().getHours();
+    partyTimeButton.innerText = "Done!";
+    partyTimeButton.style.backgroundColor = "#000";
+  }
+};
+
+partyTimeButton.addEventListener("click", partyEvent);
