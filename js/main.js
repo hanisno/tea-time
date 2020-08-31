@@ -16,12 +16,12 @@ var partyEvent = function () {
   if (isPartyTime === false) {
     isPartyTime = true;
     time = partyTime;
-    partyTimeButton.innerText = "Delicious tea!";
-    partyTimeButton.style.backgroundColor = "red";
+    partyTimeButton.innerText = "Thirst quenched";
+    partyTimeButton.style.backgroundColor = "#e3e";
   } else {
     isPartyTime = false;
     time = new Date().getHours();
-    partyTimeButton.innerText = "Thirst quenched!";
+    partyTimeButton.innerText = "Something delicious";
     partyTimeButton.style.backgroundColor = "333";
   }
 };
@@ -48,26 +48,33 @@ var updateClock = function () {
   var timeEventJS = document.getElementById("timeEvent");
   var messageText;
   var lolcat = document.getElementById("lolcat");
-  var image = "../img/tea-tray.png";
+  var image = "../img/tea-main.jpg";
 
   if (time == partyTime) {
-    messageText = "Tea party time.";
+    messageText =
+      "Try Thai tea! This decadant, sweet and creamy drink is a refreshing treat on hot days.";
     image = "../img/thai-tea.jpg";
   } else if (time == morningTime) {
-    messageText = "Morning tea time.";
+    messageText =
+      "It's time for white tea. The light and aromatic flavours are more pronounced with a fresh palette.";
     image = "../img/white-tea.jpg";
   } else if (time == lunchTime) {
-    messageText = "Lunch tea time.";
+    messageText =
+      "Drink black tea. It's rich flavor can cut through the greasiness of lunch and gives a quick energy boost.";
     image = "../img/black-tea.jpg";
   } else if (time == nightTime) {
-    messageText = "Night tea time.";
+    messageText =
+      "Sip chamomile tea. It will wind down and calm your senses after a long day.";
     image = "../img/chamomile-tea.jpg";
   } else if (time < noon) {
-    messageText = "Good morning.";
+    messageText =
+      "What tea should you drink this afternoon? Set your afteroon tea time to find out.";
   } else if (time > night) {
-    messageText = "Good evening.";
+    messageText =
+      "What tea should you drink this evening? Set your evening tea time to find out.";
   } else {
-    messageText = "Good afternoon.";
+    messageText =
+      "What tea should you drink this morning? Set your morning tea time to find out.";
   }
 
   timeEventJS.innerText = messageText;
@@ -96,7 +103,8 @@ var showCurrentTime = function () {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian;
+  var clockTime =
+    "It's" + " " + hours + ":" + minutes + ":" + seconds + " " + meridian;
   clock.innerText = clockTime;
 };
 
