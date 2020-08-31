@@ -2,12 +2,15 @@ var time = new Date().getHours();
 var image;
 var noon = 12;
 var night = 18;
-var wakeupTime = 9;
+var morningTime = 9;
 var lunchTime = 12;
-var nightTime = 19;
+var nightTime = 18;
 var partyTime = 15;
 var isPartyTime = false;
 var partyTimeButton = document.getElementById("partyTimeButton");
+var morningTimeSelector = document.getElementById("morningTimeSelector");
+var lunchTimeSelector = document.getElementById("lunchTimeSelector");
+var nightTimeSelector = document.getElementById("nightTimeSelector");
 
 var updateClock = function () {
   var timeEventJS = document.getElementById("timeEvent");
@@ -18,7 +21,7 @@ var updateClock = function () {
   if (time == partyTime) {
     messageText = "Tea party time.";
     image = "../img/thai-tea.jpg";
-  } else if (time == wakeupTime) {
+  } else if (time == morningTime) {
     messageText = "Morning tea time.";
     image = "../img/white-tea.jpg";
   } else if (time == lunchTime) {
@@ -73,14 +76,30 @@ var partyEvent = function () {
   if (isPartyTime === false) {
     isPartyTime = true;
     time = partyTime;
-    partyTimeButton.innerText = "Feeling tea-riffic!";
-    partyTimeButton.style.backgroundColor = "#222";
+    partyTimeButton.innerText = "Delicious tea!";
+    partyTimeButton.style.backgroundColor = "red";
   } else {
     isPartyTime = false;
     time = new Date().getHours();
-    partyTimeButton.innerText = "Done!";
-    partyTimeButton.style.backgroundColor = "#000";
+    partyTimeButton.innerText = "Thirst quenched!";
+    partyTimeButton.style.backgroundColor = "333";
   }
 };
 
 partyTimeButton.addEventListener("click", partyEvent);
+
+var morningEvent = function () {
+  morningTime = morningTimeSelector.value;
+};
+
+var lunchEvent = function () {
+  lunchTime = lunchTimeSelector.value;
+};
+
+var nightEvent = function () {
+  nightTime = nightTimeSelector.value;
+};
+
+morningTimeSelector.addEventListener("change", morningEvent);
+lunchTimeSelector.addEventListener("change", lunchEvent);
+nightTimeSelector.addEventListener("change", nightEvent);
