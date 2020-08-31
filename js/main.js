@@ -12,6 +12,38 @@ var morningTimeSelector = document.getElementById("morningTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var nightTimeSelector = document.getElementById("nightTimeSelector");
 
+var partyEvent = function () {
+  if (isPartyTime === false) {
+    isPartyTime = true;
+    time = partyTime;
+    partyTimeButton.innerText = "Delicious tea!";
+    partyTimeButton.style.backgroundColor = "red";
+  } else {
+    isPartyTime = false;
+    time = new Date().getHours();
+    partyTimeButton.innerText = "Thirst quenched!";
+    partyTimeButton.style.backgroundColor = "333";
+  }
+};
+
+partyTimeButton.addEventListener("click", partyEvent);
+
+var morningEvent = function () {
+  morningTime = morningTimeSelector.value;
+};
+
+var lunchEvent = function () {
+  lunchTime = lunchTimeSelector.value;
+};
+
+var nightEvent = function () {
+  nightTime = nightTimeSelector.value;
+};
+
+morningTimeSelector.addEventListener("change", morningEvent);
+lunchTimeSelector.addEventListener("change", lunchEvent);
+nightTimeSelector.addEventListener("change", nightEvent);
+
 var updateClock = function () {
   var timeEventJS = document.getElementById("timeEvent");
   var messageText;
@@ -71,35 +103,3 @@ var showCurrentTime = function () {
 updateClock();
 var oneSecond = 1000;
 setInterval(updateClock, oneSecond);
-
-var partyEvent = function () {
-  if (isPartyTime === false) {
-    isPartyTime = true;
-    time = partyTime;
-    partyTimeButton.innerText = "Delicious tea!";
-    partyTimeButton.style.backgroundColor = "red";
-  } else {
-    isPartyTime = false;
-    time = new Date().getHours();
-    partyTimeButton.innerText = "Thirst quenched!";
-    partyTimeButton.style.backgroundColor = "333";
-  }
-};
-
-partyTimeButton.addEventListener("click", partyEvent);
-
-var morningEvent = function () {
-  morningTime = morningTimeSelector.value;
-};
-
-var lunchEvent = function () {
-  lunchTime = lunchTimeSelector.value;
-};
-
-var nightEvent = function () {
-  nightTime = nightTimeSelector.value;
-};
-
-morningTimeSelector.addEventListener("change", morningEvent);
-lunchTimeSelector.addEventListener("change", lunchEvent);
-nightTimeSelector.addEventListener("change", nightEvent);
