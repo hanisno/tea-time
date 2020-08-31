@@ -119,6 +119,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
 }
+
 header {
   padding-top: 20px;
 }
