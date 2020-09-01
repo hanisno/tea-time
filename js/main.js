@@ -78,7 +78,7 @@ var updateClock = function () {
     image = "../img/white-tea.jpg";
   } else if (time == lunchTime) {
     messageText =
-      "Drink black tea. It's rich flavor can cut through the greasiness of lunch and gives a quick energy boost.";
+      "Drink black tea. Its rich flavor can cut through the greasiness of food and gives a quick energy boost.";
     image = "../img/black-tea.jpg";
   } else if (time == nightTime) {
     messageText =
