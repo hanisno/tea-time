@@ -66,24 +66,24 @@ var updateClock = function () {
   var timeEventJS = document.getElementById("timeEvent");
   var messageText;
   var lolcat = document.getElementById("lolcat");
-  var image = "../img/tea-main.jpg";
+  var image = "tea-main.jpg";
 
   if (time == partyTime) {
     messageText =
       "Try Thai tea! This decadant, sweet and creamy drink is a refreshing treat on hot days.";
-    image = "../img/thai-tea.jpg";
+    image = "thai-tea.jpg";
   } else if (time == morningTime) {
     messageText =
       "It's time for white tea. The light and aromatic flavours are more pronounced with a fresh palette.";
-    image = "../img/white-tea.jpg";
+    image = "white-tea.jpg";
   } else if (time == lunchTime) {
     messageText =
       "Drink black tea. Its rich flavor can cut through the greasiness of food and gives a quick energy boost.";
-    image = "../img/black-tea.jpg";
+    image = "black-tea.jpg";
   } else if (time == nightTime) {
     messageText =
       "Sip chamomile tea. It will wind down and calm your senses after a long day.";
-    image = "../img/chamomile-tea.jpg";
+    image = "chamomile-tea.jpg";
   } else if (time < noon) {
     messageText =
       "What tea should you drink this morning? Set your morning tea time to find out.";
