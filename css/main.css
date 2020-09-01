@@ -219,6 +219,10 @@ select {
   font-size: 1.5em;
 }
 
+.clicked {
+  background-color: red;
+}
+
 footer {
   font-family: "Josefin Sans", Helvetica, sans-serif;
   text-transform: uppercase;

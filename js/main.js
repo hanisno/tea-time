@@ -26,6 +26,24 @@ var partyEvent = function () {
   }
 };
 
+var mouseOverEvent = function () {
+  if (isPartyTime === false) {
+    partyTimeButton.style.backgroundColor = "#6e6e6e";
+  } else {
+    partyTimeButton.style.backgroundColor = "#6e6e6e";
+  }
+};
+
+var mouseOutEvent = function () {
+  if (isPartyTime === false) {
+    partyTimeButton.style.backgroundColor = "#333";
+  } else {
+    partyTimeButton.style.backgroundColor = "6e6e6e";
+  }
+};
+
+partyTimeButton.addEventListener("mouseover", mouseOverEvent);
+partyTimeButton.addEventListener("mouseout", mouseOutEvent);
 partyTimeButton.addEventListener("click", partyEvent);
 
 var morningEvent = function () {
