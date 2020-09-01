@@ -21,7 +21,7 @@ var partyEvent = function () {
   } else {
     isPartyTime = false;
     time = new Date().getHours();
-    partyTimeButton.innerText = "Thirst-tea?";
+    partyTimeButton.innerText = "Thirs-tea?";
     partyTimeButton.style.backgroundColor = "#333";
   }
 };
@@ -86,13 +86,13 @@ var updateClock = function () {
     image = "../img/chamomile-tea.jpg";
   } else if (time < noon) {
     messageText =
-      "What tea should you drink this afternoon? Set your afteroon tea time to find out.";
+      "What tea should you drink this morning? Set your morning tea time to find out.";
   } else if (time > night) {
     messageText =
       "What tea should you drink this evening? Set your evening tea time to find out.";
   } else {
     messageText =
-      "What tea should you drink this morning? Set your morning tea time to find out.";
+      "What tea should you drink this afternoon? Set your afternoon tea time to find out.";
   }
 
   timeEventJS.innerText = messageText;
