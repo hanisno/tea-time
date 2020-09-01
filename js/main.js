@@ -16,13 +16,13 @@ var partyEvent = function () {
   if (isPartyTime === false) {
     isPartyTime = true;
     time = partyTime;
-    partyTimeButton.innerText = "Thirst quenched";
-    partyTimeButton.style.backgroundColor = "#e3e";
+    partyTimeButton.innerText = "Thirst quenched!";
+    partyTimeButton.style.backgroundColor = "#6e6e6e";
   } else {
     isPartyTime = false;
     time = new Date().getHours();
-    partyTimeButton.innerText = "Something delicious";
-    partyTimeButton.style.backgroundColor = "333";
+    partyTimeButton.innerText = "Thirst-tea?";
+    partyTimeButton.style.backgroundColor = "#333";
   }
 };
 
