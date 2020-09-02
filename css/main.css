@@ -101,7 +101,6 @@ textarea {
 html {
   font-size: 15px;
   margin: 0 auto;
-  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -111,10 +110,9 @@ body {
   font-size: 1em;
   background-color: #ebd8cd;
   color: #333333;
-  width: 830px;
-  height: 90vh;
+  max-width: 830px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 30px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -156,8 +154,9 @@ span,
 main {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -168,24 +167,22 @@ section {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
 }
 
 .content-wrapper {
-  width: 90%;
+  width: 100%;
   background: #fff;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
 }
 
 .tea-type-container {
-  padding: 20px 30px;
+  padding: 30px 50px;
 }
 
-.time-selectors .content-wrapper {
-  margin-left: 50px;
-  align-items: stretch;
-  justify-content: space-between;
-  /*padding-top: 16%;*/
+.time-selectors {
+  padding-top: 30px;
 }
 
 .time-selectors article {
@@ -225,6 +222,7 @@ footer {
   text-transform: uppercase;
   font-size: 0.7em;
   padding-top: 10px;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -311,20 +309,54 @@ footer {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+	 TABLET STYLES
+========================================================================== */
+@media only screen and (min-width: 1000px) {
+  html {
+    height: 100vh;
+  }
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  body {
+    height: 90vh;
+    padding: 0;
+  }
+
+  main {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  section {
+    justify-content: flex-start;
+  }
+
+  .content-wrapper {
+    width: 90%;
+  }
+
+  .tea-type-container {
+    padding: 20px 30px;
+  }
+
+  .time-selectors {
+    padding-top: 0;
+  }
+
+  .time-selectors .content-wrapper {
+    margin-left: 50px;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  footer {
+    text-align: left;
+  }
 }
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
