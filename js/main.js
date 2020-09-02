@@ -92,7 +92,7 @@ var updateClock = function () {
       "What tea should you drink this evening? Set your evening tea time to find out.";
   } else {
     messageText =
-      "What tea should you drink this afternoon? Set your lunch tea time to find out.";
+      "What tea should you drink this afternoon? Set your afternoon tea time to find out.";
   }
 
   timeEventJS.innerText = messageText;
